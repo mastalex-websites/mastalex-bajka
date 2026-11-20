@@ -77,9 +77,184 @@
 <link rel="stylesheet" href="/fonts/fonts.css?v=1">
 <link rel="stylesheet" href="/pod.css?v=9">
 <style>
-.project-shot-mobile {
-  max-width: 340px;
+.case-hero, .case-story, .case-end {
+  min-height: 0;
+}
+.case-hero .kin {
+  display: block;
+  min-height: 0;
+  max-width: 1180px;
+  padding: clamp(84px, 10vw, 132px) 24px 40px;
+}
+.case-hero .okr {
+  margin: 0 0 16px;
+  max-width: none;
+  width: fit-content;
+}
+.case-hero .okr ol {
+  align-items: center;
+}
+.case-hero .okr a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+}
+.case-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 54px);
+  max-width: none;
+  padding: clamp(24px, 4vw, 50px);
+}
+.case-intro h1 {
+  margin: 0;
+  font-size: clamp(36px, 5.1vw, 68px);
+  font-weight: 700;
+  line-height: .98;
+  letter-spacing: -.05em;
+  text-wrap: balance;
+}
+.case-intro h1 span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--link);
+  font-size: .37em;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+.case-intro .project-shot {
+  margin: 0;
+}
+.case-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 24px;
+}
+.case-links .btn {
+  min-height: 44px;
+}
+.case-links .btn-primary::after {
+  transform: rotate(135deg);
+}
+.case-hero + .case-story {
+  margin-top: 0;
+}
+.case-hero + .case-story .kin, .case-end .kin {
+  padding: 44px 24px 64px;
+}
+.case-end .pcta {
+  padding: clamp(28px, 5vw, 56px) clamp(20px, 5vw, 48px);
+}
+.case-copy {
+  max-width: 820px;
+}
+.case-copy .case-lead {
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.55;
+}
+.case-lead, .case-toc, .case-copy > h2[id] {
+  scroll-margin-top: 82px;
+}
+.case-toc {
+  margin-top: 26px;
+  padding: clamp(14px, 3vw, 24px);
+  border: 1px solid #cbb9ea;
+  border-radius: 16px;
+  background: #f2eaff;
+}
+.case-toc h2 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -.02em;
+}
+.case-toc ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 20px;
+  margin: 10px 0 0;
+  padding-left: 24px;
+}
+.case-toc li + li {
+  margin-top: 0;
+}
+.case-toc a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 0;
+  line-height: 1.35;
+}
+.case-copy > h2[id] {
+  margin-top: clamp(30px, 5vw, 46px);
+  padding-top: 22px;
+  border-top: 1px solid #d9cbb0;
+}
+.case-copy .project-shot-mobile {
+  max-width: 330px;
   margin-inline: auto;
+}
+.case-copy .project-shot figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 14px;
+}
+.case-copy .project-shot figcaption a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.case-copy .case-return {
+  margin-top: 36px;
+}
+@media (max-width: 760px) {
+  .case-hero .kin {
+    padding: 74px 14px 24px;
+  }
+  .case-hero .okr li:not(:has(a[href="/realizacje/"])) {
+    display: none;
+  }
+  .case-hero .okr ol {
+    padding-block: 0;
+  }
+  .case-hero .okr a {
+    min-height: 44px;
+    gap: 6px;
+  }
+  .case-hero .okr a::before {
+    content: "←";
+  }
+  .case-hero + .case-story .kin, .case-end .kin {
+    padding: 24px 14px 44px;
+  }
+  .case-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 22px clamp(13px, 4vw, 22px);
+  }
+  .case-intro h1 {
+    font-size: clamp(34px, 9vw, 52px);
+  }
+  .case-intro h1 span {
+    font-size: 15px;
+  }
+  .case-links {
+    margin-top: 18px;
+  }
+  .case-copy {
+    padding-inline: clamp(15px, 4.5vw, 24px);
+  }
+}
+@media (max-width: 580px) {
+  .case-toc ol {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 </style>
 </head>
@@ -118,8 +293,8 @@
 </div>
 <main id="main">
   <article aria-labelledby="realizacja-tytul">
-    <section class="kr kr-wstep wid nonight" id="kraina-1" data-motyw="ksiezyc" style="--d:url(/img/motywy/ksiezyc-onas-d.webp);--dm:url(/img/motywy/ksiezyc-onas-dm.webp)">
-      <div class="kbg" aria-hidden="true"><div class="kst"><picture class="khero-art"><source media="(max-width: 760px)" srcset="/img/motywy/ksiezyc-onas-dm-lekki.webp"><img src="/img/motywy/ksiezyc-onas-d.webp" alt="" fetchpriority="high"></picture><div class="kimg n"></div></div></div>
+    <section class="kr kr-wstep wid nonight case-hero" id="kraina-1" data-motyw="ksiezyc" style="--d:url(/img/motywy/ksiezyc-onas-d.webp);--dm:url(/img/motywy/ksiezyc-onas-dm.webp)">
+      <div class="kbg" aria-hidden="true"><div class="kst"><picture class="khero-art"><source media="(max-width: 760px)" srcset="/img/motywy/ksiezyc-onas-dm-lekki.webp"><img src="/img/motywy/ksiezyc-onas-d.webp" alt="" decoding="async"></picture><div class="kimg n"></div></div></div>
       <div class="kin">
         <nav aria-label="Okruszki" class="okr">
           <ol>
@@ -130,19 +305,28 @@
             <li aria-current="page">Akumulatory Tarnów</li>
           </ol>
         </nav>
-        <div class="pan pan-wst">
-          <p class="znak">Realizacja dla klienta</p>
-          <h1 id="realizacja-tytul">Jak powstała strona internetowa Akumulatory Tarnów</h1>
-          <p>Wszystko zaczęło się od rozmowy telefonicznej z klientem. Ustaliliśmy, jaki cel ma spełniać strona i jaki będzie zakres prac. Już wtedy pojawił się pierwszy pomysł na otwarcie strony. Chcieliśmy pokazać samochód, który rozpada się w miarę przewijania.</p>
-          <div><a class="btn btn-primary" href="#przebieg-realizacji">Zobacz przebieg realizacji</a></div>
+        <div class="pan case-intro">
+          <div>
+            <h1 id="realizacja-tytul"><span>Jak powstała strona internetowa</span> Akumulatory Tarnów</h1>
+            <div class="case-links">
+              <a class="btn btn-primary" href="#opis-realizacji">Czytaj opis</a>
+              <a class="btn btn-link" href="https://akumulatory-tarnow.pl/">Strona klienta</a>
+            </div>
+          </div>
+          <figure class="project-shot">
+            <img src="/img/realizacje/akumulatory-tarnow/strona-glowna.webp" alt="Czerwony samochód pod nagłówkiem, a pod nim wejścia do oferty i pogotowia." width="1440" height="870" fetchpriority="high" decoding="async">
+            <figcaption>Pierwszy ekran strony w wersji na komputer.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
-    <section class="kr kr-proza" id="kraina-2" data-motyw="mecz" style="--d:url(/img/motywy/mecz-d.webp);--dm:url(/img/motywy/mecz-dm.webp);--n:url(/img/motywy/mecz-n.webp);--nm:url(/img/motywy/mecz-nm.webp)">
+    <section class="kr kr-proza case-story" id="kraina-2" data-motyw="mecz" style="--d:url(/img/motywy/mecz-d.webp);--dm:url(/img/motywy/mecz-dm.webp);--n:url(/img/motywy/mecz-n.webp);--nm:url(/img/motywy/mecz-nm.webp)">
       <div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
       <div class="kin">
-        <div class="pan proza">
-          <nav id="przebieg-realizacji" aria-label="Spis treści">
+        <div class="pan proza case-copy">
+          <p class="case-lead" id="opis-realizacji">Wszystko zaczęło się od rozmowy telefonicznej z klientem. Ustaliliśmy, jaki cel ma spełniać strona i jaki będzie zakres prac. Już wtedy pojawił się pierwszy pomysł na otwarcie strony. Chcieliśmy pokazać samochód, który rozpada się w miarę przewijania.</p>
+          <nav class="case-toc" id="przebieg-realizacji" aria-labelledby="case-toc-title">
+            <h2 id="case-toc-title">Spis treści</h2>
             <ol>
               <li><a href="#pierwszy-projekt">Burza mózgów i pierwszy projekt</a></li>
               <li><a href="#strona-glowna">Jak ułożyliśmy stronę główną</a></li>
@@ -155,10 +339,6 @@
           <h2 id="pierwszy-projekt">1. Burza mózgów i pierwszy projekt</h2>
           <p>Pierwszy dzień poświęciliśmy na burzę mózgów. Dokładnie przejrzeliśmy strony konkurencji i zaczęliśmy zbierać elementy, na których mogliśmy oprzeć projekt. Wybraliśmy paletę kolorów i kroje pisma. Ustaliliśmy też, jak wstępnie ma wyglądać animacja.</p>
           <p>Przygotowaliśmy pierwszy szablon sekcji otwierającej stronę, nazywanej też sekcją hero, a potem przetestowaliśmy kilka wariantów. Duża część tej pracy polegała na wprowadzaniu drobnych zmian. Samo dobranie rozmiaru nagłówka wymagało kilku prób. Tekst musiał mieścić się na ekranie, wyglądać proporcjonalnie do reszty treści i zostawiać miejsce na elementy obrazu. Każda zmiana rozmiaru wpływała więc na układ całej sekcji.</p>
-          <figure class="project-shot">
-            <img src="/img/realizacje/akumulatory-tarnow/strona-glowna.webp" alt="Czerwony samochód pod nagłówkiem, a pod nim wejścia do oferty i pogotowia." width="1440" height="870" loading="lazy" decoding="async">
-            <figcaption>Pierwszy ekran strony w wersji na komputer.</figcaption>
-          </figure>
           <h2 id="strona-glowna">2. Jak ułożyliśmy stronę główną</h2>
           <p>Drugiego dnia zajęliśmy się resztą strony głównej. Zależało nam na tym, żeby pokazać ofertę w nieoczywisty sposób i jednocześnie ułatwić odwiedzającym znalezienie tego, czego szukają. Podzieliliśmy stronę na trzy części.</p>
           <p>Pierwsza miała zaciekawić. Podczas przewijania samochód zaczyna się rozpadać, a odwiedzający po raz pierwszy wchodzi w interakcję ze stroną. Chcieliśmy w ten sposób przyciągnąć jego uwagę i już na początku zacząć budować zaufanie do firmy.</p>
@@ -166,20 +346,20 @@
           <p>Trzecią część poświęciliśmy akumulatorom. Tutaj zależało nam przede wszystkim na prostocie. Zrezygnowaliśmy z animacji, żeby odwiedzający mógł od razu skupić się na produktach.</p>
           <figure class="project-shot">
             <img src="/img/realizacje/akumulatory-tarnow/kategorie-akumulatorow.webp" alt="Cztery ilustrowane kategorie: akumulatory samochodowe, motocyklowe i rolnicze oraz prostowniki i ładowarki." width="1440" height="870" loading="lazy" decoding="async">
-            <figcaption>Sekcja z kategoriami produktów.</figcaption>
+            <figcaption><span>Sekcja z kategoriami produktów.</span><a href="/img/realizacje/akumulatory-tarnow/kategorie-akumulatorow.webp" aria-label="Powiększ zrzut ekranu. Sekcja z kategoriami produktów.">Powiększ</a></figcaption>
           </figure>
           <h2 id="kompresja-animacji">3. Kompresja animacji</h2>
           <p>Trzeciego dnia zaczęliśmy wprowadzać poprawki. To ten moment, kiedy opada entuzjazm z poprzedniego dnia i trzeba zabrać się za drobiazgi. Najwięcej czasu zajęło nam zmniejszenie rozmiaru pierwszej sekcji strony, czyli tej z animacją rozpadającego się samochodu.</p>
           <p>Chcieliśmy, żeby strona ładowała się szybko, dlatego trzymaliśmy się limitu 15 MB dla wideo 3D. Na tym etapie cała sekcja ważyła 52 MB, więc znacznie przekraczała przyjęty limit. Kompresja filmu zajęła nam prawie cały dzień. W końcu udało nam się zmniejszyć plik do 13 MB bez większej utraty jakości obrazu i z zachowaniem płynności animacji na poziomie 120 klatek. Dzięki temu strona szybko się ładowała, a efekt rozpadającego się samochodu nadal wyglądał tak, jak chcieliśmy.</p>
           <figure class="project-shot">
             <img src="/img/realizacje/akumulatory-tarnow/animacja-samochodu.webp" alt="Drzwi i elementy karoserii oddzielają się od czerwonego samochodu." width="1440" height="870" loading="lazy" decoding="async">
-            <figcaption>Klatka animacji podczas przewijania strony.</figcaption>
+            <figcaption><span>Klatka animacji podczas przewijania strony.</span><a href="/img/realizacje/akumulatory-tarnow/animacja-samochodu.webp" aria-label="Powiększ zrzut ekranu. Klatka animacji podczas przewijania strony.">Powiększ</a></figcaption>
           </figure>
           <h2 id="telefon-i-seo">4. Wersja na telefon i lokalne SEO</h2>
           <p>Czwartego dnia dopracowaliśmy wersję mobilną. Założyliśmy, że większość osób, które wejdą na stronę z telefonu, będzie potrzebowała szybkiej pomocy z samochodem. Dlatego w wersji mobilnej zrezygnowaliśmy z ciężkiej sekcji z animacją i daliśmy pierwszeństwo pogotowiu akumulatorowemu. Dzięki temu kierowca, któremu nie odpala auto, może od razu znaleźć kontakt.</p>
           <figure class="project-shot project-shot-mobile">
             <img src="/img/realizacje/akumulatory-tarnow/widok-mobilny.webp" alt="Na telefonie czerwona karta pogotowia akumulatorowego z dużym przyciskiem do połączenia znajduje się nad kartą oferty." width="390" height="844" loading="lazy" decoding="async">
-            <figcaption>Pierwszy ekran na telefonie z widocznym numerem do pogotowia.</figcaption>
+            <figcaption><span>Pierwszy ekran na telefonie z widocznym numerem do pogotowia.</span><a href="/img/realizacje/akumulatory-tarnow/widok-mobilny.webp" aria-label="Powiększ zrzut ekranu. Pierwszy ekran na telefonie z widocznym numerem do pogotowia.">Powiększ</a></figcaption>
           </figure>
           <h3>Struktura strony i analiza konkurencji</h3>
           <p>Tego samego dnia zajęliśmy się SEO. W części technicznej dopracowaliśmy strukturę kodu strony. Pracowaliśmy też nad doborem słów kluczowych związanych z ofertą firmy. Zapytanie o pogotowie akumulatorowe w Tarnowie i zapytanie o akumulator do konkretnego samochodu wynikają z dwóch różnych potrzeb. W pierwszym przypadku kierowca szuka szybkiej pomocy i kontaktu. W drugim chce znaleźć informacje, które pomogą mu dobrać akumulator. To rozróżnienie ma znaczenie przy planowaniu treści, które mają odpowiadać na konkretne wyszukiwania.</p>
@@ -195,11 +375,12 @@
           <p>W projekcie widać to na dwóch przykładach. Informacje o pogotowiu akumulatorowym mają prowadzić kierowcę do lokalnej usługi i kontaktu. Tekst o akumulatorach do Mercedesa ma pomóc osobie szukającej informacji o produkcie. Każda z tych treści ma własne miejsce i jasno określony temat. Dzięki temu czytelnik może szybciej trafić na potrzebną informację, a narzędzie generujące odpowiedź ma do dyspozycji fragment dotyczący konkretnego pytania.</p>
           <h2 id="wdrozenie">6. Wdrożenie strony i ostatnie poprawki</h2>
           <p>Ostatniego dnia wdrożyliśmy stronę na hostingu klienta. Zajęliśmy się też poprawkami, które zostały na koniec. W ferworze pracy łatwo przeoczyć drobiazgi, takie jak literówka w jednym z artykułów. Takie rzeczy poprawiliśmy przy wdrożeniu.</p>
+          <p class="case-return"><a href="#przebieg-realizacji">Wróć do spisu treści ↑</a></p>
         </div>
       </div>
     </section>
   </article>
-  <section class="kr kr-cta" id="kraina-3" data-motyw="syrenka" style="--d:url(/img/motywy/syrenka-d.webp);--dm:url(/img/motywy/syrenka-dm.webp);--n:url(/img/motywy/syrenka-n.webp);--nm:url(/img/motywy/syrenka-nm.webp)">
+  <section class="kr kr-cta case-end" id="kraina-3" data-motyw="syrenka" style="--d:url(/img/motywy/syrenka-d.webp);--dm:url(/img/motywy/syrenka-dm.webp);--n:url(/img/motywy/syrenka-n.webp);--nm:url(/img/motywy/syrenka-nm.webp)">
     <div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
     <div class="kin">
       <div class="pan pcta">
