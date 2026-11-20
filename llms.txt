@@ -22,6 +22,8 @@ Bezpłatny projekt strony i przejrzysta wycena są gotowe w 3 dni. Jeśli strona
 
 - [O nas](https://mastalex.pl/o-nas): założyciele Karol Mastalerz (Politechnika Warszawska, Matematyka i Analiza Danych) i Aleks Popkowski (Uniwersytet Warszawski, Informatyka).
 - [Profil autora](https://mastalex.pl/o-nas#kosma-mastalerz): Kosma Mastalerz prowadzi Mastalex i pisze poradniki o stronach oraz SEO.
+- [Realizacje](https://mastalex.pl/realizacje/): portfolio projektów Mastalex.
+- [Realizacja: Akumulatory Tarnów](https://mastalex.pl/realizacje/akumulatory-tarnow/): projekt, animacja, wersja mobilna i lokalne SEO.
 - [Realizacja własna](https://mastalex.pl/o-nas#realizacja-mastalex): projekt i wdrożenie witryny Mastalex.
 - [Kontakt](https://mastalex.pl/kontakt): kontakt@mastalex.pl albo formularz. Współpraca online, cała Polska.
 
