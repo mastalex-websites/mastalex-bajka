@@ -62,17 +62,26 @@
   line-height: 1.08;
   letter-spacing: -.03em;
 }
-.realizacja h2[id], .realizacja-spis {
+.realizacja h2[id], #pelny-opis, .realizacja-spis {
   scroll-margin-top: 90px;
+}
+.realizacja-akcje {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
 }
 .realizacja-spis {
   margin-top: 24px;
+}
+#pelny-opis {
+  margin-top: 32px;
 }
 .realizacja-spis summary {
   cursor: pointer;
   font-weight: 600;
 }
-.realizacja-spis + h2 {
+#pelny-opis + h2 {
   margin-top: 32px;
 }
 </style>
@@ -116,8 +125,11 @@
     <div class="kin">
       <div class="pan proza">
           <h1 id="realizacja-tytul">Jak powstała strona internetowa Akumulatory Tarnów</h1>
-          <p>Wszystko zaczęło się od rozmowy telefonicznej z klientem. Ustaliliśmy, jaki cel ma spełniać strona i jaki będzie zakres prac. Już wtedy pojawił się pierwszy pomysł na otwarcie strony. Chcieliśmy pokazać samochód, który rozpada się w miarę przewijania.</p>
-          <p><a class="btn btn-primary" href="https://akumulatory-tarnow.pl/">Zobacz stronę Akumulatory Tarnów</a></p>
+          <p>Zaprojektowaliśmy i wdrożyliśmy stronę dla sklepu i pogotowia akumulatorowego w Tarnowie. Na komputerze samochód rozpada się podczas przewijania, a na telefonie od razu widać kontakt do pogotowia. Treści przygotowaliśmy też pod lokalne wyszukiwania w Google.</p>
+          <div class="realizacja-akcje">
+            <a class="btn btn-primary" href="https://akumulatory-tarnow.pl/">Zobacz stronę klienta</a>
+            <a class="btn btn-sec" href="#pelny-opis">Przeczytaj pełny opis</a>
+          </div>
           <details id="przebieg-realizacji" class="realizacja-spis">
             <summary>Spis treści</summary>
             <ol>
@@ -129,6 +141,7 @@
               <li><a href="#wdrozenie">Wdrożenie strony i ostatnie poprawki</a></li>
             </ol>
           </details>
+          <p id="pelny-opis">Wszystko zaczęło się od rozmowy telefonicznej z klientem. Ustaliliśmy, jaki cel ma spełniać strona i jaki będzie zakres prac. Już wtedy pojawił się pierwszy pomysł na otwarcie strony. Chcieliśmy pokazać samochód, który rozpada się w miarę przewijania.</p>
           <h2 id="pierwszy-projekt">1. Burza mózgów i pierwszy projekt</h2>
           <p>Pierwszy dzień poświęciliśmy na burzę mózgów. Dokładnie przejrzeliśmy strony konkurencji i zaczęliśmy zbierać elementy, na których mogliśmy oprzeć projekt. Wybraliśmy paletę kolorów i kroje pisma. Ustaliliśmy też, jak wstępnie ma wyglądać animacja.</p>
           <p>Przygotowaliśmy pierwszy szablon sekcji otwierającej stronę, nazywanej też sekcją hero, a potem przetestowaliśmy kilka wariantów. Duża część tej pracy polegała na wprowadzaniu drobnych zmian. Samo dobranie rozmiaru nagłówka wymagało kilku prób. Tekst musiał mieścić się na ekranie, wyglądać proporcjonalnie do reszty treści i zostawiać miejsce na elementy obrazu. Każda zmiana rozmiaru wpływała więc na układ całej sekcji.</p>
