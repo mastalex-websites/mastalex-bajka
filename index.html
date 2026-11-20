@@ -408,6 +408,21 @@ html.menu-open,html.menu-open body{overflow:hidden}
   .faq-box{padding:30px 18px}
 }
 @media (max-width:900px) and (min-width:641px){.steps{row-gap:56px}.people{row-gap:24px}.cards{gap:80px}}
+
+/* ===== poprawki 20.11: hero mieści się w oknie, usługi w osobnej ramce, tła sekcji z tego samego świata co hero ===== */
+.world{margin:var(--gap) 12px 0;border-top:3px solid var(--ink);border-radius:28px;background:var(--wbg,#63881e)}
+.night .world{background:var(--wbgn,#1e3841)}
+@media (max-width:640px){.world{margin:var(--gap) 8px 0;border-radius:22px}}
+.scena .kimg{background-position:center top}
+@media (min-width:641px) and (max-height:900px){
+  .content{padding-top:4px}
+  .eyebrow{padding:5px 12px}
+  h1{font-size:clamp(30px,min(4.1vw,6.4vh),58px);margin-top:10px;max-width:1100px}
+  .scroll{max-width:780px;margin-top:14px}
+  .scroll .lead{padding:10px 28px;font-size:15px;line-height:1.5}
+  .cta{margin-top:clamp(40px,6.5vh,64px)}
+  .bottom{padding-bottom:16px}
+}
 </style>
 </head>
 <body>
@@ -493,7 +508,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 </section>
 </div>
 
-<div class="scena sc-seo" style="--d:url(img/motywy/ksiezyc-d.webp);--dm:url(img/motywy/ksiezyc-dm.webp);--n:url(img/motywy/ksiezyc-n.webp);--nm:url(img/motywy/ksiezyc-nm.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
+<div class="scena sc-seo" style="--d:url(img/swiat/d-04.webp);--dm:url(img/swiat/m-03.webp);--n:url(img/swiat/dn-04.webp);--nm:url(img/swiat/mn-03.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
 <section class="seo" aria-labelledby="seo-h">
   <div class="seo-box">
     <div class="seo-txt">
@@ -513,7 +528,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 </section>
 </div>
 
-<div class="scena sc-proc" style="--d:url(img/motywy/podniebne-d.webp);--dm:url(img/motywy/podniebne-dm.webp);--n:url(img/motywy/podniebne-n.webp);--nm:url(img/motywy/podniebne-nm.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
+<div class="scena sc-proc" style="--d:url(img/swiat/d-05.webp);--dm:url(img/swiat/m-04.webp);--n:url(img/swiat/dn-05.webp);--nm:url(img/swiat/mn-04.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
 <section class="proc" aria-labelledby="proc-h">
   <h2 id="proc-h" class="wh2">Jak wygląda współpraca</h2>
   <ol class="steps">
@@ -525,7 +540,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 </section>
 </div>
 
-<div class="scena sc-motto" style="--d:url(img/motywy/roszpunka-d.webp);--dm:url(img/motywy/roszpunka-dm.webp);--n:url(img/motywy/roszpunka-n.webp);--nm:url(img/motywy/roszpunka-nm.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
+<div class="scena sc-motto" style="--d:url(img/swiat/d-06.webp);--dm:url(img/swiat/m-05.webp);--n:url(img/swiat/dn-06.webp);--nm:url(img/swiat/mn-05.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
 <section class="motto" aria-labelledby="motto-h">
   <div class="motto-box">
     <h2 id="motto-h">Twoja wizja. <span>Nasze wykonanie.</span></h2>
@@ -537,7 +552,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 </section>
 </div>
 
-<div class="scena sc-team" style="--d:url(img/motywy/tadeusz-d.webp);--dm:url(img/motywy/tadeusz-dm.webp);--n:url(img/motywy/tadeusz-n.webp);--nm:url(img/motywy/tadeusz-nm.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
+<div class="scena sc-team" style="--d:url(img/swiat/d-07.webp);--dm:url(img/swiat/m-06.webp);--n:url(img/swiat/dn-07.webp);--nm:url(img/swiat/mn-06.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
 <section class="team" aria-labelledby="zespol-h">
   <h2 id="zespol-h" class="wh2">Kto odpowiada za Twoją stronę</h2>
   <p class="wlead">Założycielami Mastalex są Karol Mastalerz i Aleks Popkowski.</p>
@@ -549,7 +564,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 </section>
 </div>
 
-<div class="scena sc-faq" style="--d:url(img/motywy/swinki-d.webp);--dm:url(img/motywy/swinki-dm.webp);--n:url(img/motywy/swinki-n.webp);--nm:url(img/motywy/swinki-nm.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
+<div class="scena sc-faq" style="--d:url(img/swiat/d-08.webp);--dm:url(img/swiat/m-07.webp);--n:url(img/swiat/dn-08.webp);--nm:url(img/swiat/mn-07.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
 <section class="faq" aria-labelledby="faq-h">
   <div class="faq-box">
     <h2 id="faq-h">Częste pytania</h2>
@@ -567,7 +582,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 </section>
 </div>
 
-<div class="scena sc-kontakt" style="--d:url(img/motywy/morze-d.webp);--dm:url(img/motywy/morze-dm.webp);--n:url(img/motywy/morze-n.webp);--nm:url(img/motywy/morze-nm.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
+<div class="scena sc-kontakt" style="--d:url(img/swiat/d-09.webp);--dm:url(img/swiat/m-07.webp);--n:url(img/swiat/dn-09.webp);--nm:url(img/swiat/mn-07.webp)"><div class="kbg" aria-hidden="true"><div class="kst"><div class="kimg"></div><div class="kimg n"></div></div></div>
 <section class="kontakt" id="kontakt" aria-labelledby="kontakt-h">
   <div class="k-txt">
     <h2 id="kontakt-h">Opowiedz nam o swojej firmie</h2>
@@ -607,6 +622,6 @@ html.menu-open,html.menu-open body{overflow:hidden}
 <script src="lib/postacie.js"></script>
 <script src="lib/chatka.js"></script>
 <script src="img/swiat/swiat.js?v=5"></script>
-<script src="v3.js?v=uklad2"></script>
+<script src="v3.js?v=uklad3"></script>
 </body>
 </html>
