@@ -1,7 +1,8 @@
 # seo_porzadek.py [lastmod.json] : uruchom w katalogu strony przed wdrożeniem.
 # 1) linki wewnętrzne na adresy kanoniczne (/kontakt zamiast kontakt.html), 2) duplikaty i stare adresy jako przekierowania,
 # 3) sitemap.xml z datami lastmod (data zmienia się tylko przy zmianie treści, nie wyglądu).
-import io,os,re,sys,json
+import hashlib,html,io,os,re,sys,json
+from datetime import date
 D=os.path.abspath('.');L=('\\\\?\\'+D+'\\') if os.name=='nt' else D+'/'
 N=lambda p:p.replace('/',os.sep)
 def rd(p):return io.open(L+N(p),encoding='utf8').read()
@@ -42,9 +43,31 @@ OLD={'strony-internetowe-od-500-zl':'/strony-internetowe-od-1500-zl','poradniki/
      'tworzenie-stron-internetowych':'/strony-internetowe-od-1500-zl','cennik-stron-internetowych':'/cennik-tworzenia-stron-internetowych-2026',
      'poradniki/ile-kosztuje-strona-internetowa':'/poradniki/ile-kosztuje-strona-internetowa-2026'}
 for o,n in OLD.items():stub(o+'.html',n)
-# sitemap z lastmod
-lm=json.load(open(sys.argv[1],encoding='utf8')) if len(sys.argv)>1 else {}
-urls=''.join(f'  <url><loc>{SITE}{r}</loc>'+(f'<lastmod>{lm[r]["date"]}</lastmod>' if r in lm else '')+'</url>\n' for r in CANON)
+# Datę zmieniamy przy zmianie tekstu strony, tytułu lub metaopisu.
+def content_hash(document):
+    main = re.search(r'<main\b[^>]*>(.*?)</main>', document, re.S)
+    title = re.search(r'<title>(.*?)</title>', document, re.S)
+    description = re.search(r'<meta\b(?=[^>]*\bname="description")[^>]*\bcontent="([^"]*)"', document)
+    text = re.sub(r'<(?:script|style)\b[^>]*>.*?</(?:script|style)>', '', main[1] if main else '', flags=re.S)
+    text = re.sub(r'<[^>]+>', ' ', text)
+    fields = [title[1] if title else '', description[1] if description else '', text]
+    normalized = '\n'.join(' '.join(html.unescape(field).split()) for field in fields)
+    return hashlib.sha256(normalized.encode('utf8')).hexdigest()
+
+ledger_path = sys.argv[1] if len(sys.argv) > 1 else 'scripts/lastmod.json'
+with open(ledger_path, encoding='utf8') as ledger_file:
+    previous = json.load(ledger_file)
+today = date.today().isoformat()
+lm = {}
+for route, filename in CANON.items():
+    old = previous.get(route, {})
+    current = content_hash(rd(filename))
+    changed = old.get('content_hash', current) != current
+    lm[route] = {'date': today if changed or 'date' not in old else old['date'], 'content_hash': current}
+with open(ledger_path, 'w', encoding='utf8', newline='\n') as ledger_file:
+    json.dump(lm, ledger_file, indent=2, ensure_ascii=False)
+    ledger_file.write('\n')
+urls=''.join(f'  <url><loc>{SITE}{r}</loc><lastmod>{lm[r]["date"]}</lastmod></url>\n' for r in CANON)
 wr('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls+'</urlset>\n')
 left=[(f,m) for f in CANON.values() for m in re.findall(r'href="(?:\.\./)?[a-z0-9-]+\.html[^"]*"',rd(f))]
 print('stron',len(CANON),'przekierowań',len(OLD)+2+len(GUIDES),'pozostałe linki .html:',left[:5])

@@ -46,13 +46,14 @@ main{position:relative;display:block}
 .kr+.kr .kbg{-webkit-mask-image:linear-gradient(transparent,#000 var(--fade));mask-image:linear-gradient(transparent,#000 var(--fade))}
 .kst{position:sticky;top:0;height:100vh;height:100lvh;overflow:hidden;background:var(--kol,#7b6bb8)}
 .kimg{position:absolute;inset:0;background-position:var(--fx,50%) var(--fy,50%);background-size:cover;background-repeat:no-repeat}
-html:not(.js) .kimg{background-image:var(--d)}
-.kr.wid .kimg{background-image:var(--d)}
+.khero-art,.khero-art img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.khero-art img{object-fit:cover;object-position:var(--fx,50%) var(--fy,50%)}
+html:not(.js) .kimg:not(.n),.kr.wid .kimg:not(.n){background-image:var(--d)}
 .kimg.n{opacity:0;transition:opacity 1.2s ease-in-out}
 html.night .kr.wid .kimg.n{background-image:var(--n)}
 html.night .kimg.n{opacity:1}
 @media (max-width:760px){
-  html:not(.js) .kimg,.kr.wid .kimg{background-image:var(--dm,var(--d))}
+  html:not(.js) .kimg:not(.n),.kr.wid .kimg:not(.n){background-image:var(--dm,var(--d))}
   html.night .kr.wid .kimg.n{background-image:var(--nm,var(--n))}
 }
 /* noc bez osobnego obrazu: przyciemnienie dziennego */
@@ -329,7 +330,7 @@ html.night .kafel-link{filter:brightness(.93)}
   .kform-wrap{padding:30px 20px}
   .cena-duza{font-size:30px}
   .fgrid{grid-template-columns:1fr;padding:44px 20px}
-  .lever{right:10px;bottom:10px;padding:6px 9px}
+  .lever{position:absolute;top:76px;right:16px;bottom:auto;padding:6px 9px;min-height:44px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -415,3 +416,13 @@ html.menu-open .lever{visibility:hidden}
 .siatka>li:not(.kafel):has(>.knum)>.knum{position:absolute;left:0;top:0}
 .siatka>li:not(.kafel):has(>.knum)>.knum+*{display:block;padding-top:9px}
 @media (max-width:700px){.siatka>li:not(.kafel):has(>.knum){padding-left:56px;font-size:16px}}
+
+
+.table-hint{display:none}
+.project-shot{margin:24px 0}
+.project-shot img{display:block;width:100%;height:auto;border-radius:16px;border:2px solid var(--ink)}
+.project-shot figcaption{font-size:14px;margin-top:8px;color:var(--txt2)}
+#formularz{scroll-margin-top:105px}
+@media (max-width:760px){
+  .proza .table-hint{display:block;font-size:14px;margin-bottom:8px}
+}

@@ -1,6 +1,6 @@
 # Mastalex
 
-> Mastalex (mastalex.pl) tworzy i przebudowuje strony internetowe dla firm z całej Polski oraz wykonuje SEO, dzięki któremu strony klientów pojawiają się wyżej w Google i częściej w odpowiedziach czatów AI. Wygląd każdej strony projektuje od zera, bez gotowych szablonów. Strona wizytówka kosztuje od 1500 zł. Założycielami są Karol Mastalerz i Aleks Popkowski. Klient najpierw dostaje bezpłatny projekt i przejrzystą wycenę, a za stronę płaci dopiero po akceptacji projektu.
+> Mastalex (mastalex.pl) tworzy i przebudowuje strony internetowe oraz wdraża uzgodnione poprawki SEO dla firm w całej Polsce. Wygląd każdej strony projektuje od zera, bez gotowych szablonów. Strona wizytówka kosztuje od 1500 zł. Założycielami są Karol Mastalerz i Aleks Popkowski. Klient najpierw dostaje bezpłatny projekt i przejrzystą wycenę, a za stronę płaci dopiero po akceptacji projektu.
 
 Bezpłatny projekt strony i przejrzysta wycena są gotowe w 3 dni. Jeśli strona wymaga więcej pracy, Mastalex od razu podaje termin i powód. Klient zgłasza poprawki, aż projekt będzie taki, jak chce, i płaci dopiero po jego akceptacji. Po uruchomieniu strona i wszystkie dostępy do niej należą do klienta, więc to klient decyduje, kto się nią zajmuje. Przez 12 miesięcy od uruchomienia Mastalex bezpłatnie naprawia każdy błąd strony. Cena z wyceny się nie zmienia: bez zgody klienta nic do niej nie dochodzi. Jedyne coroczne koszty strony to domena i hosting. Całą współpracę Mastalex prowadzi online, z firmami z całej Polski.
 
@@ -8,7 +8,7 @@ Bezpłatny projekt strony i przejrzysta wycena są gotowe w 3 dni. Jeśli strona
 
 - [Tworzenie stron internetowych](https://mastalex.pl/strony-internetowe-od-1500-zl): strona z wyglądem zaprojektowanym od zera pod firmę klienta, bez gotowych szablonów, z tekstami, które Mastalex pisze za klienta. Strona wizytówka (jedna strona z ofertą, opisem firmy i kontaktem): od 1500 zł. Strona firmowa do 5 podstron, z osobną podstroną dla każdej usługi: 1500 zł. Domenę i hosting klient opłaca osobno (dotyczy tylko nowych stron): domena .pl ok. 70–220 zł rocznie, hosting małej strony ok. 160–310 zł rocznie, w pierwszym roku zwykle taniej (ceny z VAT, wrzesień 2026). Mastalex nie ma współpracy reklamowej z firmami sprzedającymi domeny i hosting, więc dobiera je wyłącznie pod kątem korzyści klienta, np. hosting z bezpłatnym certyfikatem SSL (kłódka przy adresie strony). Każda kolejna podstrona kosztuje 150 zł, a drobna zmiana treści, np. nowy numer telefonu, 50 zł.
 - [Przebudowa strony internetowej](https://mastalex.pl/przebudowa-strony-internetowej): odświeżenie istniejącej strony, także zrobionej przez inną firmę: nowoczesny wygląd, aktualna oferta, szybkie wczytywanie i wygodne działanie na telefonie. Przebudowa strony od 1400 zł. Dokładna cena zależy od zakresu prac. Projekt nowej wersji jest bezpłatny.
-- [Optymalizacja SEO](https://mastalex.pl/optymalizacja-seo): Mastalex wykonuje SEO i wdraża poprawki na stronie klienta: audyt SEO, dobór haseł i dopasowanie tekstów, tytuły i opisy w wynikach Google, szybkość i działanie na telefonie, opis firmy pod polecenia czatów AI. Efekt: wyższe pozycje w Google, więcej odwiedzin i częstsze polecenia w czatach AI. Od 300 zł, także dla stron wykonanych przez inne firmy.
+- [Optymalizacja SEO](https://mastalex.pl/optymalizacja-seo): Mastalex wykonuje SEO i wdraża poprawki na stronie klienta: audyt SEO, dobór haseł i dopasowanie tekstów, tytuły i opisy w wynikach Google, szybkość i działanie na telefonie, czytelny opis firmy i usług dla wyszukiwarek. Zakres prac jest potwierdzany w wycenie, a efekty można mierzyć w Google Search Console. Od 300 zł, także dla stron wykonanych przez inne firmy.
 - [Cennik stron internetowych](https://mastalex.pl/cennik-tworzenia-stron-internetowych-2026): ceny wszystkich usług, co jest w cenie strony i kiedy klient płaci.
 
 ## Poradniki
@@ -21,6 +21,8 @@ Bezpłatny projekt strony i przejrzysta wycena są gotowe w 3 dni. Jeśli strona
 ## Firma
 
 - [O nas](https://mastalex.pl/o-nas): założyciele Karol Mastalerz (Politechnika Warszawska, Matematyka i Analiza Danych) i Aleks Popkowski (Uniwersytet Warszawski, Informatyka).
+- [Profil autora](https://mastalex.pl/o-nas#kosma-mastalerz): Kosma Mastalerz prowadzi Mastalex i pisze poradniki o stronach oraz SEO.
+- [Realizacja własna](https://mastalex.pl/o-nas#realizacja-mastalex): projekt i wdrożenie witryny Mastalex.
 - [Kontakt](https://mastalex.pl/kontakt): kontakt@mastalex.pl albo formularz. Współpraca online, cała Polska.
 
 ## Współpraca

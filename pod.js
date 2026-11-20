@@ -22,7 +22,7 @@ function retrig(el,cls){if(!el)return;el.classList.remove(cls);void el.offsetWid
 let seed=11;const R=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646;};
 
 /* ---- plansze krain: obraz dopiero, gdy kraina jest blisko ---- */
-if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('wid');io.unobserve(e.target);}}),{rootMargin:'150% 0px'});KR.forEach(k=>io.observe(k));}
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('wid');io.unobserve(e.target);}}),{rootMargin:'100px 0px'});KR.filter(k=>!k.classList.contains('kr-wstep')).forEach(k=>io.observe(k));}
 else KR.forEach(k=>k.classList.add('wid'));
 
 /* ---- dzień / noc (zapamiętane) ---- */
@@ -163,5 +163,10 @@ function wire(){
   window.POD={get T(){return T;},get S(){return S;},get ACT(){return ACT;},get PAR(){return PAR;},get SC(){return SC;},build,pass,startAct};}
 function start(){if(window.SCENY)try{SC=window.SCENY({get T(){return T;},get ACT(){return ACT;},get S(){return S;},get L(){return L;},get FS(){return FS;},get DW(){return DW;},kick,addFX,sparkles,confetti,handG});}catch(e){SC=null;}
   wire();ready=true;build();AS.classList.add('on');kick(1);}
-(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(start);
+(document.fonts?.ready||Promise.resolve()).then(()=>{
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    if('requestIdleCallback' in window)requestIdleCallback(start,{timeout:900});
+    else setTimeout(start,0);
+  }));
+});
 })();

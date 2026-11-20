@@ -1,70 +1,54 @@
 {
   "/": {
-    "hash": "88e57e62ff91d0755e862a520b150ba1fd61b95e708a0205c71b405d1b2aceb2",
-    "date": "2026-11-03"
-  },
-  "/strony-internetowe-od-1500-zl": {
-    "hash": "60feced381a39d143c929f594e91d3298061caef1ba354e8fd245239c997c404",
-    "date": "2026-11-03"
-  },
-  "/przebudowa-strony-internetowej": {
-    "hash": "33906da0aa8dee602c59c87c366efe7cb0bd63ed60258bc86e0425f9e50172a7",
-    "date": "2026-11-03"
-  },
-  "/optymalizacja-seo": {
-    "hash": "a47d4915bcf0eaf3edeb90f5785d31b9fbbf4d617679f986ac89f12d46056731",
-    "date": "2026-11-03"
-  },
-  "/cennik-tworzenia-stron-internetowych-2026": {
-    "hash": "a578be4eef1c6ed01ca2c6e43fd98d4cf583f18f448646118c7772cbf2badd6d",
-    "date": "2026-11-03"
-  },
-  "/o-nas": {
-    "hash": "1fd9ad30da8dc27d23ad99eb4f50f4f49d75f71db0923af0fa7ca2765835cb5c",
-    "date": "2026-11-03"
-  },
-  "/kontakt": {
-    "hash": "871e2976717455f2bb5a018f7ab209203e3c0cc5ab0b559885cc8794c5edb03e",
-    "date": "2026-11-03"
-  },
-  "/polityka-prywatnosci": {
-    "hash": "e753d5e0ca38e5c529506681c020122c2769cdb93baff8ea1d9fe8e3bf3eae5e",
-    "date": "2026-11-03"
-  },
-  "/audyt-seo/": {
-    "hash": "1b008a707dc1ca465d7cc33fa0e2b64a8e3ac7a1a04cac63b38a4a0efb89a2eb",
-    "date": "2026-11-03"
-  },
-  "/audyt-seo/regulamin": {
-    "hash": "388d14f5f50c0dc7c46400191ec0d8e94f4c7c1f828b4f3c0ec431d0f48c28c6",
-    "date": "2026-11-03"
-  },
-  "/audyt-seo/polityka-prywatnosci": {
-    "hash": "d601e8d6624f621cec2ab72490f42eed8a8eae7d3c41efd059c1db0f960d8f6a",
-    "date": "2026-11-03"
-  },
-  "/audyt-seo/formularz-odstapienia": {
-    "hash": "8b5b3a3057008623cbd2b9c79812dd2c8c71acea7fd0fe24597c1020eb163057",
-    "date": "2026-11-03"
+    "date": "2026-11-20",
+    "content_hash": "f642604f79dea792385b04977b569327f489623dd03ba33ae136a3eb24b2177a"
   },
   "/poradniki/": {
-    "hash": "252c7c3c7bc469256e571c8b4b556725d97e0679ad068f544a9c8731ce08a546",
-    "date": "2026-11-03"
+    "date": "2026-11-20",
+    "content_hash": "c0d7034eced99d26d9f419604dd3d45b55687a3c1d62aeccca90a77745fd2b6a"
+  },
+  "/strony-internetowe-od-1500-zl": {
+    "date": "2026-11-20",
+    "content_hash": "af2843fcbc780d169ce0ce53b7870e4b94379d0b22457121876d6de754f63e52"
+  },
+  "/przebudowa-strony-internetowej": {
+    "date": "2026-11-20",
+    "content_hash": "b8ecbc9d39c3ab30d35e79ca9597fa8ac262343f9365a4927ec44e075918d00c"
+  },
+  "/optymalizacja-seo": {
+    "date": "2026-11-20",
+    "content_hash": "9b81d8cff82569c9b436601433e5abe62e9c6fc198bba314507b6a8179b6e380"
+  },
+  "/cennik-tworzenia-stron-internetowych-2026": {
+    "date": "2026-11-20",
+    "content_hash": "27b241f8c9e6540809769c4c0b85d702004338ae7528f94acdd002b642ba1645"
+  },
+  "/o-nas": {
+    "date": "2026-11-20",
+    "content_hash": "921bbee38e1d83bd4b57e894551ca4f751aa64999d31aaed06bbdce9dfdffa49"
+  },
+  "/kontakt": {
+    "date": "2026-11-20",
+    "content_hash": "69f7fee1ed08bdfc9d18f2e6f1c8a7631ea62fa23d6f280326f718e9cffa33a3"
+  },
+  "/polityka-prywatnosci": {
+    "date": "2026-11-03",
+    "content_hash": "d72917c638e06062c8d09966e51b8af1bb4ebb1174bf86a7e7bfe58e03fdc69b"
   },
   "/poradniki/jak-byc-wyzej-w-google": {
-    "hash": "21d79b2adcb3fb57a834af06325d0259a2d59a0c2cd1977166ce6e381cb32fb0",
-    "date": "2026-11-03"
+    "date": "2026-10-11",
+    "content_hash": "6513c0a3bd21454a67827008ba7d83a7121843672758f759c0efbc41905f0aca"
   },
   "/poradniki/ile-kosztuje-strona-internetowa-2026": {
-    "hash": "4419566e2082a723fa395d1d7b56eb199b5454633fcc203351212b71601f214c",
-    "date": "2026-11-03"
+    "date": "2026-11-20",
+    "content_hash": "d3e5fe1f573ad2879abd241bf25ec47b580f77b36154500dbd3644cf9e7831a4"
   },
   "/poradniki/strona-internetowa-od-1500-zl": {
-    "hash": "4671cd2b91327d06faa2f4f0a651103660dfda8eafb17bf4e054d53f2d0a7447",
-    "date": "2026-11-03"
+    "date": "2026-11-03",
+    "content_hash": "385b3090457193755dd8e72e6c6a5afcf63c6b1011809afa9bd656b7ee8934fe"
   },
   "/poradniki/najlepsze-firmy-tworzace-strony-internetowe-polska": {
-    "hash": "a1d4d7ec3ca2c1857cf7df8eec1cd4ec08b31bcc90c7c379935ff941fd436e2a",
-    "date": "2026-11-03"
+    "date": "2026-11-03",
+    "content_hash": "267ab226e545793ef4f16906f365a3144687c13f66a801a47ea66340c7428bde"
   }
 }
