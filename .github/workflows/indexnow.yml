@@ -1,0 +1,30 @@
+name: IndexNow
+
+# Po każdej zmianie strony mówi Bingowi (a przez niego wyszukiwarce ChatGPT i Copilotowi), że adresy z sitemapy się zmieniły.
+# Nie blokuje wdrożenia: GitHub Pages publikuje stronę osobno, ten krok tylko czeka, aż nowa wersja będzie online.
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Notify IndexNow
+        env:
+          KEY: 542b73cb65642da58bfaac39ef2481c7
+        run: |
+          sleep 60
+          for i in $(seq 1 18); do
+            [ "$(curl -s -o /dev/null -w '%{http_code}' "https://mastalex.pl/$KEY.txt")" = 200 ] && break
+            sleep 10
+          done
+          URLS=$(grep -o '<loc>[^<]*</loc>' sitemap.xml | sed -e 's/<[^>]*>//g' -e 's/.*/"&"/' | paste -sd, -)
+          curl -sS -o /dev/null -w 'IndexNow HTTP %{http_code}\n' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "{\"host\":\"mastalex.pl\",\"key\":\"$KEY\",\"keyLocation\":\"https://mastalex.pl/$KEY.txt\",\"urlList\":[$URLS]}"
